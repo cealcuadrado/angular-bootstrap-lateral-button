@@ -1,0 +1,7 @@
+<div class="lateral-section"
+  [ngClass]="{'to-left':direction === 'left', 'to-right':direction === 'right'}"
+  [ngStyle]="{'transform':'translate(' + translateHorizontal + 'px,' + translateVertical + 'px)'}">
+  <button class="btn btn-primary" (click)="onToggle()">
+    Pendientes
+  </button>
+</div>

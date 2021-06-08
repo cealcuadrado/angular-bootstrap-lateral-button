@@ -1,0 +1,16 @@
+.lateral-section {
+  position: absolute;
+  top: 1rem;
+
+  button {
+    transform: rotate(90deg);
+  }
+
+  .to-left {
+    left: 0;
+  }
+
+  .to-right {
+    right: 0;
+  }
+}

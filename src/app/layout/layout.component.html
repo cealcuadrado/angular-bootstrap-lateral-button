@@ -1,0 +1,33 @@
+<div class="card custom-card">
+  <div class="card-header">
+    <h4 class="card-title">Card Title</h4>
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <div [ngClass]="{'col-12 col-lg-3':mostrarColumnaLateral, 'd-none':!mostrarColumnaLateral}">
+        <div class="card">
+          <div class="card-header">
+            <h4 class="card-title">Card Title</h4>
+          </div>
+          <div class="card-body">
+            <p>Card Body</p>
+          </div>
+          <app-lateral-section
+            (toggle)="toggleColumnaLateral($event)"
+            [translateHorizontal]="210"
+            [translateVertical]="16">>
+          </app-lateral-section>
+        </div>
+      </div>
+      <div [ngClass]="{'col-12 col-lg-9 p-5':mostrarColumnaLateral, 'col-12':!mostrarColumnaLateral}">
+        Columna principal
+      </div>
+    </div>
+    <app-lateral-section
+      *ngIf="!mostrarColumnaLateral"
+      (toggle)="toggleColumnaLateral($event)"
+      [translateHorizontal]="-47"
+      [translateVertical]="36">
+    </app-lateral-section>
+  </div>
+</div>
